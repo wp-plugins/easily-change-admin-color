@@ -20,14 +20,14 @@ You can also hide any menu from view.
 1. The plugin adds a new menu to the `Settings` menu called `Admin Colors`.
 1. Make changes and submit.
 
+== Screenshots ==
+
+1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
+2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
 
 == Changelog ==
 
 = .1 =
 * Submission to Wordpress
 
-== Screenshots ==
-
-1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
-2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
 
