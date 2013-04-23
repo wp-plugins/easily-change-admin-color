@@ -11,21 +11,18 @@
                     </form>
              </div>
              <div id="cam_right">
-             	<h2>Popular Menu Colors</h2>
-             	<div class="cam_pop_color" style="background-color: #97b8c8;">
-                	<div class="cam_pop_color_desc">#97b8c8</div>
-                </div>
-                <div class="cam_pop_color" style="background-color: #c89b97;">
-                	<div class="cam_pop_color_desc">#c89b97</div>
+             	<div id="cam_scheme">
+                	<h2>Preset Colors</h2>
+                    <?php include($url.'cam_color_scheme.php');?>
+                    <?php include($url.'inc/schemes.inc.php');?>
                 </div>
                 
                 <div id="cam_color_picker">
                 	<h2>Color Picker</h2>
                     <input type="text" value="#bada55" class="my-color-field" />
-                
-                
-                
                 </div>
+                
+                
              </div>
          </div><?php
 			cam_values($menu_id);
@@ -33,8 +30,7 @@
 
 //displays help text for the main section	
 	function main_section_callback(){
-			echo 'Change the hex value of the fields below to change the admin meni colors.  The `#` is optional.  Also, if you want to hide a menu item, enter `hide`. <br><br>';
-			echo 'Note: A cache reset may be necessary when changing colors.';
+			echo 'Change the hex value of the fields below to change the admin menu colors.  The `#` is optional.  Also, if you want to hide a menu item, enter `hide`. <br><br>';
 	};
 	
 
@@ -49,9 +45,14 @@ function field_one_callback($menu_id){
 //loads the custom css to the admin head hook	
 function cam_custom_admin_css() {
 		$plug_url = WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/';
-		echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/cam_style.css">';
 		echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/style.css">';
 		
+		if($_GET['settings-updated'] == 'true'){
+			$css_version = rand(0,100);
+			echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/cam_style.css?version='.$css_version.'">';
+		}else{
+			echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/cam_style.css">';	
+		}
 		
 	}
 
