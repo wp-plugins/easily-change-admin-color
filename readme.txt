@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.4
-Stable tag: 0.3.5
+Stable tag: 1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ You can also hide any menu from view.
 
 == Installation ==
 
-1. Upload `color-menu` to the `/wp-content/plugins/` directory
+1. Upload `easily-change-admin-color` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. The plugin adds a new menu to the `Settings` menu called `Admin Colors`.
 1. Make changes and submit.
@@ -24,11 +24,20 @@ You can also hide any menu from view.
 
 1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
 2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
+3. This shows the Color Scheme Option as well as the extended color picker. 
 
 == Changelog ==
+= 1.0 = 
+
+* Fixed a spelling error on the Admin Colors settings page.
+* Added a dropdown menu to select colors from different color schemes.
+* General house cleaning on the file/folder structure. 
+* No more cache clearning needed. Plugin now automatically forces new download of stylesheet when changes are made. 
+* Hex values are now validated.  An incorrect hex value will not be written to the spreadsheet.
+* Fixed mistake on readme.
 
 = .3.5 =
-*fixed bug that would not allow stylesheet writing.
+* fixed bug that would not allow stylesheet writing.
 
 = .1 =
 * Submission to Wordpress
