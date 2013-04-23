@@ -28,7 +28,7 @@ You can also hide any menu from view.
 == Changelog ==
 
 = .3.5 =
-*fixed bug that would not allow stylesheet writing.
+* fixed bug that would not allow stylesheet writing.
 
 = .1 =
 * Submission to Wordpress
