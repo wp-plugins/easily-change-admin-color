@@ -26,6 +26,7 @@ You can also hide any menu from view.
 2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
 
 == Changelog ==
+
 = .3.5 =
 *fixed bug that would not allow stylesheet writing.
 
