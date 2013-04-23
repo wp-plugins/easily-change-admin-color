@@ -64,7 +64,7 @@ function cam_values($menu_id){
 //write all of the fields to the CSS file.  	
 function cam_write_to_file($writable){
 		$plugin_dir =  WP_PLUGIN_DIR;
-		$our_css = "/color-menu/css/cam_style.css";
+		$our_css = "/easily-change-admin-color/css/cam_style.css";
 		
 		
 		$writable_file = $plugin_dir.$our_css;

@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.4
-Stable tag: 0.3
+Stable tag: 0.3.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
