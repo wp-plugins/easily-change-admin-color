@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: .01
+    Version: .3.5
     Author: Kyle Foulks
 	License: GPLv2;
     */
