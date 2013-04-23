@@ -8,6 +8,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Allows easy manipulation of Wordpress admin menu colors and more.
 
+== Description ==
+
+This plugin allows easy manipulation of Wordpress admin menu colors and appearance.  Users can color code menu items in the admin menu for ease of access.  
+You can also hide any menu from view. 
 
 == Installation ==
 
@@ -21,4 +25,9 @@ Allows easy manipulation of Wordpress admin menu colors and more.
 
 = .1 =
 * Submission to Wordpress
+
+== Screenshots ==
+
+1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
+2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
 
