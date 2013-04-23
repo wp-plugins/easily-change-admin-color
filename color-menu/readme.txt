@@ -11,10 +11,6 @@ Allows easy manipulation of Wordpress admin menu colors and more.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Upload `color-menu` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. The plugin adds a new menu to the `Settings` menu called `Admin Colors`.
