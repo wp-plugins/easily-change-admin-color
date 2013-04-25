@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: .3.5
+    Version: 1.0.3
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -26,7 +26,7 @@
 function mw_enqueue_color_picker( $hook_suffix ) {
     // first check that $hook_suffix is appropriate for your admin page
     wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'my-script-handle', plugins_url('my-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+    wp_enqueue_script( 'my-script-handle', plugins_url('js/cam_js.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 }
 	
 	
@@ -45,6 +45,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					$menu_number = $v;
 					
 					$menu_title =  $menu[$menu_number][0];
+					
 					$menu_id = $menu[$menu_number][5];
 					
 					if(!empty($menu_title[0])){
@@ -64,21 +65,17 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 								}	
 							";
 						}else{
-							if($value[0] == '#'){
-							$writable .= "
-								#$key a .wp-menu-name{
-									background-color: $value !important;
-									color: #fff !important;	
+							$value = trim($value,' #');
+								if(preg_match('/^[a-f0-9]{3,6}$/i', $value)){
+									$writable .= "
+											#$key a .wp-menu-name{
+												background-color: #$value !important;
+												color: #fff !important;	
+											}
+										";
+								}else{
+									//error message
 								}
-							";	
-							}else{
-								$writable .= "
-								#$key a .wp-menu-name{
-									background-color: #$value !important;
-									color: #fff !important;	
-								}
-							";		
-							}
 						}
 					}
 			}
