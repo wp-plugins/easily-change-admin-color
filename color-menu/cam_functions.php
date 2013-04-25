@@ -46,14 +46,8 @@ function field_one_callback($menu_id){
 function cam_custom_admin_css() {
 		$plug_url = WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/';
 		echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/style.css">';
-		
-		if($_GET['settings-updated'] == 'true'){
 			$css_version = rand(0,100);
 			echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/cam_style.css?version='.$css_version.'">';
-		}else{
-			echo '<link rel="stylesheet" type="text/css" href="'.$plug_url.'css/cam_style.css">';	
-		}
-		
 	}
 
 //begins formatting data for insertion into the css file	

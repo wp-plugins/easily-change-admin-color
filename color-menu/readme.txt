@@ -1,8 +1,8 @@
 === Easily Change Admin Color ===
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 1.0.2
+Tested up to: 3.5.1
+Stable tag: 1.0.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,13 +27,17 @@ You can also hide any menu from view.
 3. This shows the Color Scheme Option as well as the extended color picker. 
 
 == Changelog ==
+
+= 1.0.3 = 
+* Fixed a bug associated with caching of the stylesheet.
+
 = 1.0 = 
 
 * Fixed a spelling error on the Admin Colors settings page.
 * Added a dropdown menu to select colors from different color schemes.
 * General house cleaning on the file/folder structure. 
 * No more cache clearning needed. Plugin now automatically forces new download of stylesheet when changes are made. 
-* Hex values are now validated.  An incorrect hex value will not be written to the spreadsheet.
+* Hex values are now validated.  An incorrect hex value will not be written to the stylesheet.
 * Fixed mistake on readme.
 
 = .3.5 =
