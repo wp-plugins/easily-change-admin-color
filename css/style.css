@@ -28,8 +28,23 @@
     width: 49px;
 }
 
+.current-scheme{
+	display: block;	
+}
+
 #cam_color_picker{
 	margin-top: 30px;
 	clear: left;
 	float: left;
+}
+
+#cam_scheme{
+	float: left;
+	clear: left;
+	margin-top: 30px;	
+}
+
+#cam_left .pending-count,
+#cam_left .plugin-count{
+	display: none;	
 }
