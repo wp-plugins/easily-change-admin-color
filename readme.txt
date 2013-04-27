@@ -27,6 +27,8 @@ You can also hide any menu from view.
 3. This shows the Color Scheme Option as well as the extended color picker. 
 
 == Changelog ==
+= 1.0.4 = 
+* Some minor changes.  
 
 = 1.0.3 = 
 * Fixed a bug associated with caching of the stylesheet.
