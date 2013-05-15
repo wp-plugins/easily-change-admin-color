@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: 1.0.4
+    Version: 1.0.5
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -35,10 +35,15 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 		
 		global $menu;
 		$cam_keys_array = array();
+			
+			
+				if($menu){
+					foreach($menu as $key=>$v){
+						array_push($cam_keys_array,$key);
+					}
+				}
 				
-			foreach($menu as $key=>$v){
-					array_push($cam_keys_array,$key);
-			}
+			
 			
 			foreach($cam_keys_array as $key=>$v){
 
@@ -56,7 +61,8 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					}
 			}
 			
-			foreach($data as $key=>$value){
+				if($menu){
+					foreach($data as $key=>$value){
 					if(!empty($value)){
 						if($key !== 'menu-settings' && strtolower($value)  == 'hide' ){
 							$writable .= "
@@ -78,7 +84,12 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 								}
 						}
 					}
-			}
+				}
+				};
+		
+			
+			
+			//??????
 			
 			if(is_admin()){
 				if($_GET['page'] = 'admin_colors'){

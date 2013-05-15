@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 1.0.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,10 @@ You can also hide any menu from view.
 3. This shows the Color Scheme Option as well as the extended color picker. 
 
 == Changelog ==
+= 1.0.5 =
+* Fixed an error message that appeared when adding items to a navigation menu.
+* Donate button added to admin colors page
+
 = 1.0.4 = 
 * Some minor changes.  
 
