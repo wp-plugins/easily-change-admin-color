@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 1.1
+Stable tag: 1.11
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ You can also hide any menu from view.
 3. A few of the preset color schemes.
 
 == Changelog ==
-= 1.1 =
+= 1.11 =
 * Fixed a bug that caused stylesheet to be overwritten during plugin update.
 * Added a link to my twitter page. Follow me on twitter!
 
@@ -59,6 +59,6 @@ You can also hide any menu from view.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.11 =
 Fixed a bug that caused stylesheet to be overwritten during plugin update.
 
