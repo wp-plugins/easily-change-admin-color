@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: 1.0.5
+    Version: 1.1
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -10,13 +10,8 @@
 	//set $hide_admin_colors_menu to 'true' to hide the options menu once all colors have been set.
 	//set $hide_admin_colors_menu to 'false' to leave the options menu visible. 
 	$hide_admin_colors_menu = 'false';
-	
-	
-	
+
 	include($url.'cam_functions.php');
-	
-	
-	
 
 	function cam_admin_menu(){
 			add_options_page( 'Admin Colors', 'Admin Colors', 'manage_options', 'admin_colors', 'cam_display_page');
@@ -29,21 +24,14 @@ function mw_enqueue_color_picker( $hook_suffix ) {
     wp_enqueue_script( 'my-script-handle', plugins_url('js/cam_js.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 }
 	
-	
-	
 	function cam_admin_init(){
-		
 		global $menu;
 		$cam_keys_array = array();
-			
-			
 				if($menu){
 					foreach($menu as $key=>$v){
 						array_push($cam_keys_array,$key);
 					}
 				}
-				
-			
 			
 			foreach($cam_keys_array as $key=>$v){
 
@@ -86,8 +74,6 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					}
 				}
 				};
-		
-			
 			
 			//??????
 			
@@ -107,6 +93,5 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 		add_action('admin_menu','cam_admin_menu');
 		add_action( 'admin_init', 'cam_admin_init' );
 	}
-	
 		add_action('admin_head','cam_custom_admin_css');
 ?>

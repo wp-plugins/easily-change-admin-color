@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 1.0.5
+Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +23,15 @@ You can also hide any menu from view.
 == Screenshots ==
 
 1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
-2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. 
-3. This shows the Color Scheme Option as well as the extended color picker. 
+2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. Also showing the expanded color picker and preset color options.
+3. A few of the preset color schemes.
 
 == Changelog ==
+= 1.1 =
+* Fixed a bug that caused stylesheet to be overwritten during plugin update.
+* Added a link to my twitter page. Follow me on twitter!
+
+
 = 1.0.5 =
 * Fixed an error message that appeared when adding items to a navigation menu.
 * Donate button added to admin colors page
@@ -42,7 +47,7 @@ You can also hide any menu from view.
 * Fixed a spelling error on the Admin Colors settings page.
 * Added a dropdown menu to select colors from different color schemes.
 * General house cleaning on the file/folder structure. 
-* No more cache clearning needed. Plugin now automatically forces new download of stylesheet when changes are made. 
+* No more cache clearing needed. Plugin now automatically forces new download of stylesheet when changes are made. 
 * Hex values are now validated.  An incorrect hex value will not be written to the stylesheet.
 * Fixed mistake on readme.
 
@@ -52,4 +57,8 @@ You can also hide any menu from view.
 = .1 =
 * Submission to Wordpress
 
+== Upgrade Notice ==
+
+= 1.0 =
+Fixed a bug that caused stylesheet to be overwritten during plugin update.
 
