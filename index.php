@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: 1.1
+    Version: 2.0
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -10,11 +10,13 @@
 	//set $hide_admin_colors_menu to 'true' to hide the options menu once all colors have been set.
 	//set $hide_admin_colors_menu to 'false' to leave the options menu visible. 
 	$hide_admin_colors_menu = 'false';
+	$menu_id_array = array();
 
 	include($url.'cam_functions.php');
 
 	function cam_admin_menu(){
 			add_options_page( 'Admin Colors', 'Admin Colors', 'manage_options', 'admin_colors', 'cam_display_page');
+			add_options_page('Admin Color Codes', 'Admin Color Codes', 'manage_options', 'color_codes', 'cam_display_page');
 	}
 	add_action( 'admin_enqueue_scripts', 'mw_enqueue_color_picker' );
 
@@ -26,6 +28,9 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 	
 	function cam_admin_init(){
 		global $menu;
+		
+		//remove the submenu page responsible for creating the color codes tab.
+		remove_submenu_page('options-general.php', 'color_codes');
 		$cam_keys_array = array();
 				if($menu){
 					foreach($menu as $key=>$v){
@@ -34,6 +39,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 				}
 			
 			foreach($cam_keys_array as $key=>$v){
+				global $menu_id_array;
 
 					$menu_number = $v;
 					
@@ -47,6 +53,10 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					add_settings_field($menu_id,$menu_title,'field_one_callback','admin_colors','main-section',$menu_id);
 					$data[$menu_id] = cam_values($menu_id);
 					}
+					
+					//add menu_ids to array
+					array_push($menu_id_array, $menu_id);
+					
 			}
 			
 				if($menu){
@@ -85,9 +95,29 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 				};
 			};
 			add_settings_section( 'main-section', 'Colors', 'main_section_callback', 'admin_colors' );
+			
+			//create section for the color code tab
+			 add_settings_section( 'color-code-section', 'Color Codes', 'color_code_section_callback', 'color_codes' );
+			 add_settings_field( 'field_id', 'Color 1', 'field_callback', 'admin_colors', 'color-code-section');
+			 global $menu_id_array;
+			 
+			 
+			 foreach($menu_id_array as $id){
+				 if($id != ''){
+					 $option = get_option('cam_'.$id);
+					 if($id != ''){
+						 if($option != '' && $option != 'hide'){
+							 
+						 	create_color_code_fields($option);
+						 }
+					 };
+				 }
+			 }
 		};
 	
 	//lets run!
+	
+	include($url.'cam_widget.php');
 	
 	if($hide_admin_colors_menu == 'false'){
 		add_action('admin_menu','cam_admin_menu');

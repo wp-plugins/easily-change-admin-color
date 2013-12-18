@@ -8,6 +8,8 @@
 				<option value="primary">Primary</option>
 				<option value="allow-deny">Allow / Deny</option>
 				<option value="purple">Purple</option>
+				<option value="orange">Orange</option>
+				<option value="yellow">Yellow</option>
 			</select>
 			</form>
 		';

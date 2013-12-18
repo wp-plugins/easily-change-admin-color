@@ -42,5 +42,13 @@ jQuery(document).ready(function($){
 		if(scheme == 'green'){
 			$('#scheme-green').show();
 		}
+		
+		if(scheme == 'orange'){
+			$('#scheme-orange').show();
+		}
+		
+		if(scheme == 'yellow'){
+			$('#scheme-yellow').show();
+		}
 	})
 	});

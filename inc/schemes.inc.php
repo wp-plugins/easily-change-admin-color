@@ -89,3 +89,39 @@
                 	<div class="cam_pop_color_desc">#66883f</div>
                 </div>
 </div>
+
+<div id="scheme-orange" class="scheme_hide">
+             	<div class="cam_pop_color" style="background-color: #e7682b;">
+                	<div class="cam_pop_color_desc">#e7682b</div>
+                </div>
+                
+                <div class="cam_pop_color" style="background-color: #ed792a;">
+                	<div class="cam_pop_color_desc">#ed792a</div>
+                </div>   
+                
+                <div class="cam_pop_color" style="background-color: #fd9534;">
+                	<div class="cam_pop_color_desc">#fd9534</div>
+                </div>
+                
+                <div class="cam_pop_color" style="background-color: #ffc165;">
+                	<div class="cam_pop_color_desc">#ffc165</div>
+                </div>
+</div>
+
+<div id="scheme-yellow" class="scheme_hide">
+             	<div class="cam_pop_color" style="background-color: #ffb600;">
+                	<div class="cam_pop_color_desc">#ffb600</div>
+                </div>
+                
+                <div class="cam_pop_color" style="background-color: #ffdf00;">
+                	<div class="cam_pop_color_desc">#ffdf00</div>
+                </div>   
+                
+                <div class="cam_pop_color" style="background-color: #feff1c;">
+                	<div class="cam_pop_color_desc">#feff1c</div>
+                </div>
+                
+                <div class="cam_pop_color" style="background-color: #ffff85;">
+                	<div class="cam_pop_color_desc">#ffff85</div>
+                </div>
+</div>
