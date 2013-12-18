@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 1.11
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,13 +21,23 @@ You can also hide any menu from view.
 1. Make changes and submit.
 
 == Screenshots ==
+1. The new look. New tabs for easier browsing.
+2. The color codes tab! Enter descriptions for the colors you are using on your admin menu. This allows users to know your intended meaning of the colors. 
+3. The dashboard widget that shows the color and description of each color used. 
 
-1. The plugin installed with no settings modified.  All menus are default colors and all menus are shown.
-2. With only a little manipulation, the admin menus have changed colors, and a few unwanted menus have been hidden from view. Also showing the expanded color picker and preset color options.
-3. A few of the preset color schemes.
+
 
 == Changelog ==
-= 1.1 =
+= 2.0 =
+* Some general behind the scenes housekeeping.
+* New tabbed browsing allows for easy navigation between option pages. 
+* Color Codes! Tell your users what your menu colors actually mean by an easy to use interface.
+* Twitter logo updated to match new Wordpress 1.8 color scheme. Follow me on twitter!
+* Preview screens beside input fields on the "menu options" tab.
+* Orange preset color scheme added.
+* Yellow preset color scheme added. 
+
+= 1.11 =
 * Fixed a bug that caused stylesheet to be overwritten during plugin update.
 * Added a link to my twitter page. Follow me on twitter!
 
@@ -59,6 +69,6 @@ You can also hide any menu from view.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.11 =
 Fixed a bug that caused stylesheet to be overwritten during plugin update.
 
