@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 2.0
+Stable tag: 2.01
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ You can also hide any menu from view.
 
 
 == Changelog ==
+= 2.01 =
+* Fixed a bug that caused conflicts with several other plugins. 
+ 
 = 2.0 =
 * Some general behind the scenes housekeeping.
 * New tabbed browsing allows for easy navigation between option pages. 
