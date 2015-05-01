@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: 2.01
+    Version: 2.10
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -12,7 +12,7 @@
 	$hide_admin_colors_menu = 'false';
 	$menu_id_array = array();
 
-	include($url.'cam_functions.php');
+	@include($url.'cam_functions.php');
 
 	function cam_admin_menu(){
 			add_options_page( 'Admin Colors', 'Admin Colors', 'manage_options', 'admin_colors', 'cam_display_page');
@@ -45,7 +45,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					
 					$menu_title =  $menu[$menu_number][0];
 					
-					$menu_id = $menu[$menu_number][5];
+					@$menu_id = $menu[$menu_number][5];
 					
 					if(!empty($menu_title[0])){
 						
@@ -69,7 +69,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 						}else{
 							$value = trim($value,' #');
 								if(preg_match('/^[a-f0-9]{3,6}$/i', $value)){
-									$writable .= "
+									@$writable .= "
 											#$key a .wp-menu-name{
 												background-color: #$value !important;
 												color: #fff !important;	
@@ -86,7 +86,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 			//??????
 			
 			if(is_admin()){
-				if($_GET['page'] == 'admin_colors'){
+				if(@$_GET['page'] == 'admin_colors'){
 					if($_GET['settings-updated'] == 'true' && $_GET['page'] == 'admin_colors'){
 						cam_write_to_file($writable);
 					};
@@ -114,7 +114,7 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 	
 	//lets run!
 	
-	include($url.'cam_widget.php');
+	@include($url.'cam_widget.php');
 	
 	if($hide_admin_colors_menu == 'false'){
 		add_action('admin_menu','cam_admin_menu');
