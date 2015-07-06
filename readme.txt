@@ -2,7 +2,7 @@
 Tags: admin,menu,colors,hide, color change
 Requires at least: 3.0.1
 Tested up to: 4.2.1
-Stable tag: 2.10
+Stable tag: 2.11
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,10 @@ You can also hide any menu from view.
 
 
 == Changelog ==
+= 2.11 =
+* Added Fiverr link and logo
+* Resolved error with Twitter logo not displaying
+
 = 2.10 =
 * Debug error messages resolved. Will continue to monitor
 

@@ -38,13 +38,21 @@
 	float: left;
 }
 
+
 #twitter{
-	background-image: url("http://localhost/WordpressTestEnvironment/wp-content/plugins/easily-change-admin-color/images/twittericon.png");
+	background-image: url("images/twittericon.png");
     float: left;
     height: 53px;
     margin-left: 8px;
     margin-top: 0;
     width: 51px;	
+}
+#fiverr{
+	background-image: url("images/fiverr.png");
+	margin-left: 10px;
+	height: 46px;
+	width: 46px;
+	float: left;
 }
 
 #cam_scheme{

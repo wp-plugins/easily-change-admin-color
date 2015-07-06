@@ -12,6 +12,7 @@
 </form>
 
 <a href="http://twitter.com/kylefoulks" target="_blank" id="twitter"></a>
+<a href="https://www.fiverr.com/kylefoulks" target="_blank" id="fiverr"></a>
 <br style="clear: both;"/>
     <?php  
         $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'menu_options';  ?>
