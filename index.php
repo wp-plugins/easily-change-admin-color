@@ -1,7 +1,7 @@
 <?php
    /* Plugin Name: Easily Change Admin Color
     Description:  Change admin menu colors and appearances. 
-    Version: 2.11
+    Version: 2.5
     Author: Kyle Foulks
 	License: GPLv2;
     */
@@ -37,7 +37,17 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 						array_push($cam_keys_array,$key);
 					}
 				}
-			
+				
+				
+				add_settings_field(
+    				'cam_WhatToColor?',
+				    'What to color?',
+				    'sandbox_checkbox_element_callback',
+				    'admin_colors',
+				    'main-section'
+				);
+
+				register_setting('cam_option_group','cam_WhatToColor');
 			foreach($cam_keys_array as $key=>$v){
 				global $menu_id_array;
 
@@ -53,12 +63,15 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					add_settings_field($menu_id,$menu_title,'field_one_callback','admin_colors','main-section',$menu_id);
 					$data[$menu_id] = cam_values($menu_id);
 					}
+
+
 					
 					//add menu_ids to array
 					array_push($menu_id_array, $menu_id);
 			}			
 				if($menu){
-					foreach($data as $key=>$value){
+					if (get_option('cam_WhatToColor') == 1) {
+						foreach($data as $key=>$value){
 					if(!empty($value)){
 						if($key !== 'menu-settings' && strtolower($value)  == 'hide' ){
 							$writable .= "
@@ -82,6 +95,36 @@ function mw_enqueue_color_picker( $hook_suffix ) {
 					}
 				}
 			};
+					}
+
+					if (get_option('cam_WhatToColor') == 2) {
+						foreach($data as $key=>$value){
+					if(!empty($value)){
+						if($key !== 'menu-settings' && strtolower($value)  == 'hide' ){
+							$writable .= "
+								#$key{
+									display: none !important;
+								}	
+							";
+						}else{
+							$value = trim($value,' #');
+								if(preg_match('/^[a-f0-9]{3,6}$/i', $value)){
+									@$writable .= "
+											#$key a .wp-menu-name{
+												border-left: 5px solid #$value !important;
+												color: #fff !important;	
+											}
+										";
+								}else{
+									//error message
+								}
+						}
+					}
+				}
+			};
+					
+
+					
 			
 			//??????
 			

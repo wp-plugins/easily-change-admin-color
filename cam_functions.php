@@ -32,6 +32,11 @@
 								settings_fields( 'cam_option_group' );  
 								do_settings_sections( 'admin_colors' );  
 							}elseif ($active_tab == 'coming_soon'){
+								echo '<h3>What\'s New in 2.5?</h3>';
+								echo '1. Users are no longer required to color an entire menu item. For a cleaner design select "border" under the "What to color" header. (As requested by master412160)';
+
+
+
 								echo '<h3>What\'s New in 2.0?</h3>';
 								echo '1. New tabbed browsing allows for easy navigation between option pages.<br>';
 								echo '2. Color Codes! Tell your users what your menu colors actually mean by an easy to use interface!<br>';
@@ -42,9 +47,10 @@
 								echo '<br>';
 								echo '<h3>Coming Soon</h3>';
 								
-								echo '1. A contact form for suggestions<br><br>';
+								echo '1. A contact form for suggestions<br>';
+								echo '2. Ability to select border width when "border" option is selected.<br><br>';
 								
-								echo 'This is my first plugin and I am improving it as I think of new ideas. However, if you have a feature that you would like to see feel free to contact me. You can contact me directly at kfoulks2011@gmail.com. Any and all suggestions are appreciated. I am also currently working on a portfolio website. I should have it released shortly. As soon as it is released, I will release a plugin update that links to it. If you like this plugin, pass it around to your friends!';
+								echo 'This is my first plugin and I am improving it as I think of new ideas. However, if you have a feature that you would like to see feel free to contact me. You can contact me directly at kylerfoulks@gmail.com. Any and all suggestions are appreciated. I am also currently working on a portfolio website. I should have it released shortly. As soon as it is released, I will release a plugin update that links to it. If you like this plugin, pass it around to your friends!';
 									
 							}else { 
 								settings_fields( 'cam_code_group' );  
@@ -138,5 +144,17 @@ function field_callback($new_color){
 		$field_value = get_option('cam_code_'.$new_color);
 	echo "<input type='text' id='cam_code_$new_color' name='cam_code_$new_color' value='$field_value'>";
 	}
+}
+
+function sandbox_checkbox_element_callback() {
+ 
+    ?>
+        <input type="radio" name="cam_WhatToColor" value="1" <?php checked(1, get_option('cam_WhatToColor'), true); ?>>Background <br>
+        <input type="radio" name="cam_WhatToColor" value="2" <?php checked(2, get_option('cam_WhatToColor'), true); ?>>Border Only
+   <?php
+ 
+}
+function border_or_bg(){
+	echo 'hello';
 }
 ?>
